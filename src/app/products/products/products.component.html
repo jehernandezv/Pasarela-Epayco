@@ -1,0 +1,24 @@
+<div class="p-4">
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Articulos en venta $</a>
+</nav>
+
+ <div class="row">
+  <div class="col-lg-3" *ngFor="let product of products">
+
+    <div class="card text-right" style="width: 18rem;">
+      <div class="card-body">
+        <img class="card-img-top" src={{product.img}}
+             alt="Card image cap">
+        <div class="card-body border-top-12">
+          <h5 class="card-title">Referencia:  {{product.ref}}</h5>
+          <p class="card-text">Detalle: {{product.detail}}</p>
+          <p class="card-text">Precio: COP {{product.price}}</p>
+          <a href="#" (click)="buyProduct(product)" class="btn btn-primary">Pagar</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
